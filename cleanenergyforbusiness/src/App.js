@@ -1,18 +1,16 @@
 import './App.css';
-import Registration from './Components/Registration';
+import Home from './Components/Home';
+import Shop from './Components/Shop';
+import Regester from './Components/Register';
 
 function App() {
   return (
     <div>
-
-      <h1> Welcome</h1>
-
-      <Registration> </Registration>
-
-
+      <Home />
+      <Shop />
+      <Regester />
 
     </div>
-
   );
 }
 
