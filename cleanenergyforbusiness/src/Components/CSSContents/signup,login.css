@@ -1,0 +1,30 @@
+.signUp {
+    background-color: #0c4897b7;
+    color: white;
+    font-size: 20px;
+    padding: 30px 60px;
+    border-radius: 4px;
+    margin: 10px 0px;
+    cursor: default;
+    border: none;
+    text-decoration: none;
+}
+
+.login {
+    background-color: #0c4897b7;
+    color: white;
+    font-size: 20px;
+    padding: 30px 60px;
+    border-radius: 4px;
+    margin: 10px 0px;
+    cursor: default;
+    border: none;
+    text-decoration: none;
+
+}
+
+.ui form {
+    display: flex;
+    margin: 13px 0px;
+
+}

@@ -1,22 +1,26 @@
 import "./CSSContents/NavBarStyle.css";
+
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+
 
 function NavBar() {
     return (
-        <>
-            <nav>
-                <Link to="/" id="title"> Clean energy for business</Link>
 
-                <div>
-                    <ul id='navbar'>
-                        <CustomLink to='/' className="active"> Home </CustomLink>
-                        <CustomLink to='/Shop' > Shop </CustomLink>
-                        <CustomLink to='/Profile' > Profile </CustomLink>
+        <nav>
+            <Link to="/" id="title"> Clean energy for business</Link>
 
-                    </ul>
-                </div>
-            </nav>
-        </>
+            <div>
+                <ul id='navbar'>
+                    <CustomLink to='/' className="active"> Home </CustomLink>
+                    <CustomLink to='/Shop' > Shop </CustomLink>
+                    <CustomLink to='/Profile' > Profile </CustomLink>
+
+
+
+                </ul>
+            </div>
+        </nav >
+
     );
 }
 function CustomLink({ to, children, ...props }) {
@@ -28,7 +32,7 @@ function CustomLink({ to, children, ...props }) {
                 {children}
             </Link>
         </li>
-    )
+    );
 }
 
 
