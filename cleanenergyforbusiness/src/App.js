@@ -3,6 +3,8 @@ import './Components/CSSContents/Footer.css';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Home from './Components/Pages/Home';
 import GymSolution from './Components/HomeContents/GymSolution';
+import Courier from './Components/HomeContents/Couriers';
+import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
 import Shop from './Components/Pages/Shop';
 import Profile from './Components/Pages/Profile';
 import SignUp from './Components/Pages/SignUp';
@@ -24,6 +26,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/GymSolution' element={<GymSolution />} />
+          <Route path='/Courier' element={<Courier />} />
+          <Route path='/BoilerBioFuel' element={<BoilerBioFuel />} />
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Profile' element={<Profile />} />
           <Route path='/SignUp' element={<SignUp />} />

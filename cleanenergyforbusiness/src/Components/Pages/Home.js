@@ -12,23 +12,25 @@ function Home() {
 
             <div className='cards__container'>
                 <div className='cards__wrapper'>
-                    <Link className='cards__items' to='GymSolution'> <img className='fade-img' src='images/897.jpg' height={200} width={400} />
-                        <h1 className='description'> Gym Business</h1>
+                    <Link className='cards__items' to='GymSolution'> <img className='fade-img'
+                        src='images/897.jpg' height={200} width={400} />
+                        <h1 className='description'> Gym Businesses</h1>
                     </Link>
 
-                    <Link className='cards__items' to='/Shop'> <img className='fade-img' src='images/img-2.jpg' height={220} width={420} />
-                        <h1 className='description'>Other Business</h1>
+                    <Link className='cards__items' to='/Courier'> <img className='fade-img'
+                        src={'images/4016547_15255.jpg'} height={220} width={420} />
+                        <h1 className='description'>Courier Businesses</h1>
                     </Link>
 
-                    <Link className='cards__items' to='Login'><img className='fade-img' src='images/img-3.jpg' height={220} width={420} />
-                        <h1 className='description'>Other Business2</h1>
+                    <Link className='cards__items' to='/BoilerBioFuel'><img className='fade-img'
+                        src='images/7291389.jpg' height={220} width={420} />
+                        <h1 className='description'>Boiler bio-fuel</h1>
                     </Link>
                 </div>
             </div>
         </div>
     )
 }
-
 
 
 export default Home;
