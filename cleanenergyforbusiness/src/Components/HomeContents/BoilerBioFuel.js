@@ -1,3 +1,4 @@
+import '../HomeContents/BoilerBioFuel.css';
 
 function BoilerBioFuel() {
     return (

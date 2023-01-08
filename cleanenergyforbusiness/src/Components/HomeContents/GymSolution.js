@@ -5,7 +5,7 @@ function GymSolution() {
         <div className='page'>
             <div className="body">
                 <h1>Starting Your Sustainability Journey in Gyms and Fitness Centers  </h1>
-
+                <br />
                 <br />
 
 
@@ -20,7 +20,7 @@ function GymSolution() {
                     sustainability into the foundation of your company, you'll draw in more clients and staff,
                     earn their trust and loyalty, and, yes, contribute to environmental protection. Here is a
                     brief summary of where to begin.
-
+                    <br />
                     <br />
 
                     <h3>What is an ECO-Friendly Gym? </h3>
@@ -39,6 +39,7 @@ function GymSolution() {
                     products, offering filtered water, and installing more effective lighting and climate management.
 
                     <br />
+                    <br />
 
                     <h3>ECO-Friendly GYM gear and supplies</h3>
                     There are many chances in your gym to switch to more environmentally friendly equipment and supplies, from yoga mats to hand
@@ -46,6 +47,7 @@ function GymSolution() {
                     environmentally friendly include natural latex resistance bands, cork-based massage rollers, and cork and rubber yoga mats. Choose
                     recycled-content mats and floor tiles, and spend your money on a single adjustable dumbbell set rather than several sets of dumbbells in varying weights.
 
+                    <br />
                     <br />
 
                     <h3>ECO-Friendly GYM machines</h3>
@@ -59,6 +61,7 @@ function GymSolution() {
                     leaks or "phantom energy."
 
                     <br />
+                    <br />
 
                     <h3>Natural  and ECO-Friendly cleaning products</h3>
 
@@ -67,6 +70,7 @@ function GymSolution() {
                     find a choice of cleaning products that are both safe and environmentally friendly. You can read more
                     about the risks associated with conventional cleaning supplies and their eco-friendly substitutes.
 
+                    <br />
                     <br />
 
                     <h3>Reduce water consumption </h3>
@@ -77,14 +81,15 @@ function GymSolution() {
                     implementing smart water programmes such placing motion sensors on taps and low-flow toilets,
                     shower heads, and faucets.
 
-
+                    <br />
                     <br />
 
                     <h3> Reduce plastic waste and provide recycling</h3>
                     Instead of selling single-use water bottles, invest in filtered water fountains to reduce plastic waste.
                     Encourage patrons to bring their own reusable water bottles to the gym or offer sturdy bottles for
                     sale as gym swag (Note: Make sure your gym swag is likewise obtained from a sustainable supplier!).
-                    <br></br>
+                    <br />
+
                     Especially if you sell items like containers for protein powder and energy drinks, offering recycling
                     can help minimise plastic waste. Members and staff should be encouraged to engage and adhere to
                     proper recycling practises.

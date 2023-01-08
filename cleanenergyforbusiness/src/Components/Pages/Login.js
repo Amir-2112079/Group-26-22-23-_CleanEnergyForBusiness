@@ -1,73 +1,112 @@
-import '../CSSContents/signup,login.css'
+import '../CSSContents/Login.css';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
+
 function Login() {
-    const initialValues = { username: "", password: "" }
-    const [formValues, setFormValues] = useState(initialValues);
-    const [formErros, setFormErros] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormValues({ ...formValues, [name]: value });
-    };
-
-    const handleSumbit = (e) => {
-        e.preventDefault();
-        setFormErros(validate(formValues));
-        setIsSubmit(true);
-    };
-
-    useEffect(() => {
-        console.log(formErros);
-        if (Object.keys(formErros).length === 0 && isSubmit) {
-            console.log(formValues);
-        }
-    }, [formErros]);
-    const validate = (values) => {
-        const errors = {};
-        if (!values.username) {
-            errors.username = "User name is needed!"
-        }
-        if (!values.password) {
-            errors.password = "password is needed!"
-        }
-        return errors;
-    };
+    const { handleChange, values, handleSubmit, errors } = useForm(validateInfo);
 
     return (
-        <div className="login">
-            <form onSubmit={handleSumbit}>
-                <h1>Login </h1>
-                <div className="uiform">
-                    <div className="field">
-                        <label>Username</label>
-                        <input
-                            type="text"
-                            name="username"
-                            placeholder="Username"
-                            value={formValues.username}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <p> {formErros.username}</p>
-                    <div className="field">
+        <div className='form-content'>
+            <form className='form' onSubmit={handleSubmit}>
+                <h1>Login</h1>
+                <div className='form-inputs'>
+                    <label className='form-label'>
+                        Username
+                    </label>
+                    <input
 
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={formValues.password}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <p> {formErros.password}</p>
-
-                    <button className="fluid ui button blue">Sumbit</button>
+                        type='username'
+                        name='username'
+                        className='form-input'
+                        placeholder='Enter your Username'
+                        value={values.username}
+                        onChange={handleChange}
+                    />
+                    {errors.username && <p> {errors.username}</p>}
                 </div>
+                <div className='form-inputs'>
+                    <label className='form-label'>
+                        Password
+                    </label>
+                    <input
+                        type='password'
+                        name='password'
+                        className='form-input'
+                        placeholder='Enter your Password'
+                        value={values.password}
+                        onChange={handleChange}
+                    />
+                    {errors.password && <p> {errors.password}</p>}
+                </div>
+                <button className='form-input-btn'
+                    type='submit'>Login
+                </button>
+                <span className='form-input-login'> Need an account? SignUp
+                    <Link to='/SignUp'> Here </Link>
+
+                </span>
             </form>
         </div>
+
     );
 }
+
+///Handling the values
+
+//gets the values for each field,,, possibly uses this to add the values to a DB
+const useForm = (validateInfo) => {
+    const [values, setValues] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
+    //uses for the error handling 
+    const [errors, setErros] = useState({});
+
+    //when something changes it updates the value 
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setValues({
+            ...values,
+            [name]: value
+        });
+    };
+    //handling the submit, prevents the page from refreshing as well asshowing the erros
+    const handleSubmit = e => {
+        e.preventDefault();
+        setErros(validateInfo(values));
+    };
+
+    return { handleChange, values, handleSubmit, errors };
+};
+
+
+///Validation Part
+
+function validateInfo(values) {
+    let errors = {}
+    //username used ,,,,,trim to eliminate the white spaces
+    if (!values.username.trim()) {
+        errors.username = 'Users name is required!'
+    }
+    //email
+    if (!values.email) {
+        errors.email = 'Email is required!'
+    }
+    else if (!/\S+@\S+\.\S+/.test(values.email)) {
+        errors.email = 'Email address is invalid';
+    }
+    if (!values.password) {
+        errors.password = 'Password is required'
+    }
+    else if (values.password.length < 6) {
+        errors.password = 'Password needs to be at least 6 character long!'
+    }
+    return errors;
+}
+
+
+
+
 
 export default Login;
