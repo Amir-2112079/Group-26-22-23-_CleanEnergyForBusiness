@@ -1,16 +1,14 @@
-
 import '../CSSContents/SignUp.css';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function SignUp() {
     const { handleChange, values, handleSubmit, errors } = useForm(validateInfo);
 
-
     return (
         <div className='form-content'>
             <form className='form' onSubmit={handleSubmit}>
-                <h1>SignUp now using the form below!</h1>
+                <h1>SignUp now</h1>
                 <div className='form-inputs'>
                     <label className='form-label'>
                         Username
@@ -73,21 +71,24 @@ const useForm = (validateInfo) => {
         email: '',
         password: ''
     });
-    //uses for the error handling 
-    const [errors, setErros] = useState({});
 
     //when something changes it updates the value 
-    const handleChange = e => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setValues({
             ...values,
             [name]: value
         });
     };
+
+    //uses for the error handling 
+    const [errors, setErros] = useState({});
+
     //handling the submit, prevents the page from refreshing as well asshowing the erros
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setErros(validateInfo(values));
+
     };
 
     return { handleChange, values, handleSubmit, errors };
