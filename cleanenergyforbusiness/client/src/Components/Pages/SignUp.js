@@ -1,4 +1,5 @@
 import '../CSSContents/SignUp.css';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -52,7 +53,9 @@ function SignUp() {
                     {errors.password && <p> {errors.password}</p>}
                 </div>
                 <button className='form-input-btn'
-                    type='submit'>SignUp
+
+                    type='submit'>
+                    SignUp
                 </button>
                 <span className='form-input-login'> Already have an account? Login
                     <Link to='/Login'> Here </Link>
