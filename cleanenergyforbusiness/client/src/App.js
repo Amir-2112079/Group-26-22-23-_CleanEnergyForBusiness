@@ -12,6 +12,7 @@ import Login from './Components/Pages/Login';
 import ErrorPage from './Components/ErrorPage';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Pages/Footer';
+import Co2Calculator from './Components/Pages/Co2Calculator';
 
 
 
@@ -30,6 +31,9 @@ function App() {
           <Route path='/BoilerBioFuel' element={<BoilerBioFuel />} />
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Profile' element={<Profile />} />
+
+          <Route path='/co2' element={<Co2Calculator />} />
+
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/Login' element={<Login />} />
 

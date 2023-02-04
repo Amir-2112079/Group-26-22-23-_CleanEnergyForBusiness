@@ -1,5 +1,5 @@
 import '../CSSContents/SignUp.css';
-import axios from 'axios';
+//import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -66,7 +66,6 @@ function SignUp() {
     );
 }
 ///Handling the values
-
 //gets the values for each field,,, possibly uses this to add the values to a DB
 const useForm = (validateInfo) => {
     const [values, setValues] = useState({
@@ -91,6 +90,7 @@ const useForm = (validateInfo) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErros(validateInfo(values));
+
 
     };
 

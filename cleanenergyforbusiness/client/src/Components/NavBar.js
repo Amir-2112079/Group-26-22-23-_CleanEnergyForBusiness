@@ -14,7 +14,7 @@ function NavBar() {
                     <CustomLink to='/' className="active"> Home </CustomLink>
                     <CustomLink to='/Shop' > Shop </CustomLink>
                     <CustomLink to='/Profile' > Profile </CustomLink>
-
+                    <CustomLink to='/co2'>Co2Calculator</CustomLink>
 
 
                 </ul>

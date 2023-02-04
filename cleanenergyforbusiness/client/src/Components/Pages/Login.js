@@ -2,6 +2,8 @@ import '../CSSContents/Login.css';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 
+
+
 function Login() {
     const { handleChange, values, handleSubmit, errors } = useForm(validateInfo);
 
@@ -88,13 +90,7 @@ function validateInfo(values) {
     //username used ,,,,,trim to eliminate the white spaces
     if (!values.username.trim()) {
         errors.username = 'Users name is required!'
-    }
-    //email
-    if (!values.email) {
-        errors.email = 'Email is required!'
-    }
-    else if (!/\S+@\S+\.\S+/.test(values.email)) {
-        errors.email = 'Email address is invalid';
+
     }
     if (!values.password) {
         errors.password = 'Password is required'

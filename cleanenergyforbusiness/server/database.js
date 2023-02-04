@@ -1,3 +1,5 @@
+/*
+
 import express from 'express';
 import { getUser, getUserId, addUser } from './index.js';
 
@@ -31,3 +33,5 @@ app.post("/user", async (req, res) => {
 app.listen(4000, () => {
     console.log('Server is running on port 4000')
 })
+
+*/
