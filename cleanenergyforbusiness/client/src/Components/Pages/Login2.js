@@ -56,50 +56,58 @@ function Login2() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const errors = validateInfo(form);
+        const errors = validateInfo(form)
         setErrors(errors);
 
-        if (Object.keys(errors).length === 0) {
-            setErrors('please check your input')
-        }
+        //check to see if the password is grater than 6
+        if (form.password.length >= 6) {
 
-        if (mode === 'login') {
-            axios.post('http://localhost:4000/login', form)
-                .then((response) => {
-                    if (response.data === 'Logged in successfully') {
-                        setMessage('Logged in successfully');
-                        window.location.href = '/';
-                    } else {
-                        setMessage('Login was unsuccessful, check your inputs!');
-                    }
-                })
-                .catch((error) => {
-                    setMessage(error.message);
-                });
-        } else {
-            axios.get(`http://localhost:4000/checkUser/${form.username}`)
-                .then((response) => {
-                    if (response.data === 'User exists') {
-                        setMessage('User already exists');
-                        return;
-                    } else {
-                        axios.post('http://localhost:4000/register', form)
-                            .then((response) => {
-                                setMessage(response.data);
-                            })
-                            .catch((error) => {
-                                setMessage(error.message);
-                            });
-                    }
-                })
-                .catch((error) => {
-                    setMessage(error.message);
-                });
-        }
+            if (mode === 'login') {
+                axios.post('http://localhost:4000/login', form)
+                    .then((response) => {
+                        if (response.data === 'Logged in successfully') {
+                            setMessage('Logged in successfully');
+                            window.location.href = '/';
+                            //  localStorage.setItem('user', JSON.stringify(form));
+                        } else {
+                            setMessage('Login was unsuccessful, check your inputs!');
+                        }
 
+                    })
+
+            } else {
+                axios.get(`http://localhost:4000/checkUser/${form.username}`)
+                    .then((response) => {
+                        if (response.data === 'User exists') {
+                            setMessage('User already exists');
+                            return;
+                        } else {
+                            axios.post('http://localhost:4000/register', form)
+                                .then((response) => {
+                                    setMessage(response.data);
+                                    //  localStorage.setItem('user', JSON.stringify(form));
+                                })
+                        }
+                    })
+                    .catch((error) => {
+                        setMessage("you must complete the form before submitting");
+                    });
+
+            }
+            setErrors(errors);
+        }
     };
 
-
+    /*
+    const user = localStorage.getItem("user");
+    
+        if (user) {
+            form = JSON.parse(user);
+            setMode("login");
+            setMessage("Logged in successfully");
+        }
+    
+    */
 
     return (
         <div className="App">
@@ -111,7 +119,7 @@ function Login2() {
                     value={form.username}
                     onChange={handleChange}
                 />
-                {errors.username && <p> {errors.username}</p>}
+                {<p> {errors.username}</p>}
                 {mode === 'register' && (
                     <>
                         <input
@@ -121,7 +129,7 @@ function Login2() {
                             value={form.email}
                             onChange={handleChange}
                         />
-                        {errors.email && <p> {errors.email}</p>}
+                        {<p> {errors.email}</p>}
                     </>
                 )}
                 <input
@@ -131,7 +139,7 @@ function Login2() {
                     value={form.password}
                     onChange={handleChange}
                 />
-                {errors.password && <p> {errors.password}</p>}
+                <p> {errors.password}</p>
 
                 <button type="submit">
                     {mode === 'login' ? 'Login' : 'Register'}
@@ -141,11 +149,11 @@ function Login2() {
                     Switch to {mode === 'login' ? 'Register' : 'Login'}
                 </button>
             </form>
-            {message && <p>{message}</p>}
+            {<p>{message}</p>}
         </div>
     );
 };
-
+//{errors.username && <p> {errors.username}</p>} for the errors
 //window.location.href ='/newPage';
 //ternary operator
 
@@ -164,42 +172,5 @@ window.localStorage.setItem('isLoggedIn', true);
         }
     }, []);
 */
-
-
-
-/*
-
- const handleSubmit = (e) => {
-        e.preventDefault();
-        setErros(validateInfo(form));
-
-
-        if (mode === 'login') {
-            axios.post('http://localhost:4000/login', form)
-                .then((response) => {
-                    setMessage(response.data);
-                })
-                .catch((error) => {
-                    setMessage(error.message);
-                });
-        } else {
-            axios.post('http://localhost:4000/register', form)
-                .then((response) => {
-                    setMessage(response.data);
-                })
-                .catch((error) => {
-                    setMessage(error.message);
-                });
-        }
-
-    };
-*/
-
-
-
-
-
-
-
 
 
