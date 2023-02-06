@@ -1,10 +1,10 @@
-import "../CSSContents/newLog.css";
+import "../CSSContents/LoginRegister.css";
 //add useEffect to save users login
 import React, { useState } from "react";
 import axios from 'axios';
 
 
-function Login2() {
+function LoginRegister() {
 
     //Saving the values in the form variable
     const [form, setForm] = useState({
@@ -40,7 +40,7 @@ function Login2() {
             errors.email = 'Email address is invalid';
         }
         if (!form.password) {
-            errors.password = 'Password is required';
+            errors.password = 'Password is required!';
         } else if (form.password.length < 6) {
             errors.password = 'Password must be at least 6 characters long!';
         }
@@ -110,54 +110,59 @@ function Login2() {
     */
 
     return (
-        <div className="App">
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={form.username}
-                    onChange={handleChange}
-                />
-                {<p> {errors.username}</p>}
-                {mode === 'register' && (
-                    <>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={form.email}
-                            onChange={handleChange}
-                        />
-                        {<p> {errors.email}</p>}
-                    </>
-                )}
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={form.password}
-                    onChange={handleChange}
-                />
-                <p> {errors.password}</p>
+        <div className="Form">
+            <div className="background">
+                <form onSubmit={handleSubmit}>
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        value={form.username}
+                        onChange={handleChange}
+                    />
+                    {errors.username && <p className="error-message" > {errors.username}</p>}
+                    {mode === 'register' && (
+                        <>
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={form.email}
+                                onChange={handleChange}
+                            />
+                            {errors.email && <p className="error-message" > {errors.email}</p>}
+                        </>
+                    )}
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={form.password}
+                        onChange={handleChange}
+                    />
+                    {errors.password && <p className="error-message" > {errors.password}</p>}
 
-                <button type="submit">
-                    {mode === 'login' ? 'Login' : 'Register'}
-                </button>
+                    <button type="submit" className='btn'>
+                        {mode === 'login' ? 'Login' : 'Register'}
+                    </button>
 
-                <button type="button" onClick={() => setMode(mode === 'login' ? 'register' : 'login')}>
-                    Switch to {mode === 'login' ? 'Register' : 'Login'}
-                </button>
-            </form>
-            {<p>{message}</p>}
+                    <button type="button" className='btn' onClick={() => setMode(mode === 'login' ? 'register' : 'login')}>
+                        Switch to {mode === 'login' ? 'Register' : 'Login'}
+                    </button>
+                </form>
+                {message && <p className="message" >{message}</p>}
+            </div>
         </div>
     );
 };
-//{errors.username && <p> {errors.username}</p>} for the errors
+
 //window.location.href ='/newPage';
 //ternary operator
 
-export default Login2;
+export default LoginRegister;
 
 
 /*

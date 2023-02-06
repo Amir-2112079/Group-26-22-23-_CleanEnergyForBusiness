@@ -7,8 +7,6 @@ import Courier from './Components/HomeContents/Couriers';
 import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
 import Shop from './Components/Pages/Shop';
 import Profile from './Components/Pages/Profile';
-import SignUp from './Components/Pages/SignUp';
-import Login from './Components/Pages/Login';
 import ErrorPage from './Components/ErrorPage';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Pages/Footer';
@@ -33,9 +31,6 @@ function App() {
           <Route path='/Profile' element={<Profile />} />
 
           <Route path='/co2' element={<Co2Calculator />} />
-
-          <Route path='/SignUp' element={<SignUp />} />
-          <Route path='/Login' element={<Login />} />
 
           <Route path='*' element={<ErrorPage />} />
 

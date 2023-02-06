@@ -1,6 +1,5 @@
 import '../CSSContents/Profile.css';
-//import Login from './Login';         <Login />
-import Login2 from './Login2';
+import LoginRegister from './LoginRegister';
 
 
 function Profile() {
@@ -9,8 +8,8 @@ function Profile() {
         <div className='Profile'>
 
 
+            <LoginRegister />
 
-            <Login2 />
 
 
 
