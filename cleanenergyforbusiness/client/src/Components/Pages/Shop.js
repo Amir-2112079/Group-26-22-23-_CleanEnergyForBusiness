@@ -1,7 +1,13 @@
+import '../CSSContents/Shop.css'
+
 function Shop() {
     return (
-        <div> <h1> Welcome to the shop page!</h1></div>
+        <div className="Shop">
+            <div>
+                Welcome to Shop
 
+            </div>
+        </div>
     )
 }
 

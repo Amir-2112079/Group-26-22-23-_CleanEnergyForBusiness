@@ -1,58 +1,37 @@
 import '../CSSContents/Footer.css'
-import { Link } from 'react-router-dom';
+
 
 function Footer() {
     return (
-        <div className='footer-container'>
-            <section className='footer-message'>
-                <p className='footer-message'>
-                    Join the Adventure to save the world by going clean!
-                </p>
-
-            </section>
-            <div class='footer-links'>
-                <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
-                        <h2>About Us</h2>
-
-                    </div>
-                    <div class='footer-link-items'>
-                        <h2>Contact Us</h2>
-
-                    </div>
+        <footer className='footer'>
+            <p className='footer-message'>Join the Adventure to save the world by going clean!</p>
+            <div className='footer-links'>
+                <div >
+                    <a href='/Shop'>
+                        <h2 className='footer-links-title' href to='/Shop' >About Us</h2>
+                    </a>
+                    <a href='/Profile'>
+                        <h2 className='footer-links-title'>Contact Us</h2>
+                    </a>
                 </div>
-                <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
-                        <h2>Social Media</h2>
-                        <div className='social-icons-wrap'>
-                            <div class='footer-link-items'>
-
-                                <a href='https://facebook.com'>
-                                    <img src="images/facebookLogo.png" height={30} width={30} />
-                                </a>
-
-                                <a href='https://instagram.com'>
-                                    <img src="images/IgLogo.png" height={30} width={30} />
-                                </a>
-                                <a href='https://twitter.com/'>
-                                    <img src="images/TwitterLogo.png" height={30} width={30} />
-                                </a>
-
-                            </div>
-
-                        </div>
+                <div className='footer-link-section'>
+                    <h2 className='footer-link-header'>Social Media</h2>
+                    <div className='social-icons-wrap'>
+                        <a href='https://facebook.com'>
+                            <img src="images/facebookLogo.png" height={30} width={30} alt='Facebook logo' />
+                        </a>
+                        <a href='https://instagram.com'>
+                            <img src="images/IgLogo.png" height={30} width={30} alt='Instagram logo' />
+                        </a>
+                        <a href='https://twitter.com/'>
+                            <img src="images/TwitterLogo.png" height={30} width={30} alt='Twitter logo' />
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class='footer-logo'>
-            </div>
-            <small class='website-rights'>Group26 © 2023</small>
-            <div class='social-icons'>
-            </div>
-        </div>
-
-    )
+            <small className='website-rights'>Group26 © 2023</small>
+        </footer>
+    );
 }
 
 

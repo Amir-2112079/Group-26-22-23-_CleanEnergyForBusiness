@@ -1,7 +1,14 @@
+import '../Components/CSSContents/ErrorPage.css'
+
 function ErrorPage() {
     return (
-        <div> <h1> Page not found!</h1></div>
+        <div className='ErrorPage'>
 
+            <div >
+                <h1 > Page not found!</h1>
+            </div>
+
+        </div>
     )
 }
 

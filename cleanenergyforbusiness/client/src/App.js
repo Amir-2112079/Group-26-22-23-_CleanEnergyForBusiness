@@ -29,7 +29,6 @@ function App() {
           <Route path='/BoilerBioFuel' element={<BoilerBioFuel />} />
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Profile' element={<Profile />} />
-
           <Route path='/co2' element={<Co2Calculator />} />
 
           <Route path='*' element={<ErrorPage />} />

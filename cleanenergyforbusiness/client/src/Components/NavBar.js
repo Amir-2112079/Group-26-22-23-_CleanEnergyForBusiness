@@ -1,41 +1,35 @@
-import "./CSSContents/NavBarStyle.css";
+import "./CSSContents/NavBar.css";
 
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 function NavBar() {
-    return (
 
+
+    return (
         <nav>
-            <Link to="/" id="title"> Clean energy for business</Link>
+            <NavLink to="/" id="title"> Clean energy for business</NavLink>
 
             <div>
                 <ul id='navbar'>
-                    <CustomLink to='/' className="active"> Home </CustomLink>
-                    <CustomLink to='/Shop' > Shop </CustomLink>
-                    <CustomLink to='/Profile' > Profile </CustomLink>
-                    <CustomLink to='/co2'>Co2Calculator</CustomLink>
-
-
+                    <NavItem to='/' label='Home' />
+                    <NavItem to='/Shop' label='Shop' />
+                    <NavItem to='/Profile' label='Profile' />
                 </ul>
+
             </div>
         </nav >
-
     );
 }
-function CustomLink({ to, children, ...props }) {
-    const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+
+function NavItem({ to, label }) {
     return (
-        <li className={isActive ? "active" : ""}>
-            <Link to={to}{...props}>
-                {children}
-            </Link>
+        <li>
+            <NavLink to={to} activeClassName='active'>
+                {label}
+            </NavLink>
         </li>
     );
 }
-
-
-
 
 export default NavBar;

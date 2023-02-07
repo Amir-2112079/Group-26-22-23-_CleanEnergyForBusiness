@@ -16,35 +16,38 @@ function Co2Calculator() {
     };
 
     return (
-        <div className="co2-calculator">
+        <div className="Co2Calculator">
             <div >
-                <label>Electricity Usage (kWh):</label>
+                <label className='co2-label'>Electricity Usage (kWh):</label>
                 <input
+                    className='co2-input'
                     type="number"
                     value={electricity}
                     onChange={(e) => setElectricity(e.target.value)}
                 />
             </div>
             <div>
-                <label>Gas Usage (therms):</label>
+                <label className='co2-label'>Gas Usage (therms):</label>
                 <input
+                    className='co2-input'
                     type="number"
                     value={gas}
                     onChange={(e) => setGas(e.target.value)}
                 />
             </div>
             <div>
-                <label>Vehicle Mileage (miles):</label>
+                <label className='co2-label'>Vehicle Mileage (miles):</label>
                 <input
+                    className='co2-input'
                     type="number"
                     value={vehicleMileage}
                     onChange={(e) => setVehicleMileage(e.target.value)}
                 />
             </div>
-            <button onClick={calculateCo2}>Calculate CO2 Output</button>
+            <button className='co2-btn' onClick={calculateCo2}>Calculate CO2 Output</button>
             <div>
-                <label>CO2 Output (metric tons):</label>
-                <input type="text" value={co2Output} readOnly />
+                <label className='co2-label'>CO2 Output (metric tons):</label>
+                <input type="text" className='co2-input' value={co2Output} readOnly />
             </div>
         </div>
     );

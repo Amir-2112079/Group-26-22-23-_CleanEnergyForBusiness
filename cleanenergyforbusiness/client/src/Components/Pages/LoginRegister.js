@@ -1,6 +1,6 @@
 import "../CSSContents/LoginRegister.css";
-//add useEffect to save users login
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 
@@ -18,6 +18,7 @@ function LoginRegister() {
     //message is used to disply any form of error to the user
     const [message, setMessage] = useState('');
 
+    const [, setLoggedIn] = useState(false);
 
     //it updates the users values in case a change has been made 
     //used a spread operator to update the form by targeting .name and .value 
@@ -31,7 +32,7 @@ function LoginRegister() {
 
     const validateInfo = (form) => {
         let errors = {};
-        if (!form.username.trim()) {
+        if (!form.username) {
             errors.username = 'Username is required!';
         }
         if (!form.email) {
@@ -47,8 +48,6 @@ function LoginRegister() {
 
         return errors;
     };
-
-
 
 
     //it is used when the form is submitted, sends message to the backend to either login or register
@@ -67,10 +66,15 @@ function LoginRegister() {
                     .then((response) => {
                         if (response.data === 'Logged in successfully') {
                             setMessage('Logged in successfully');
+
+                            setLoggedIn(true);
+                            localStorage.setItem('isLoggedIn', JSON.stringify(true));
+                            localStorage.setItem('username', JSON.stringify(form.username));
                             window.location.href = '/';
-                            //  localStorage.setItem('user', JSON.stringify(form));
+
+
                         } else {
-                            setMessage('Login was unsuccessful, check your inputs!');
+                            setMessage('Login failed; please double-check your input details or create a new account.');
                         }
 
                     })
@@ -85,12 +89,15 @@ function LoginRegister() {
                             axios.post('http://localhost:4000/register', form)
                                 .then((response) => {
                                     setMessage(response.data);
-                                    //  localStorage.setItem('user', JSON.stringify(form));
+                                    setLoggedIn(true);
+                                    localStorage.setItem('isLoggedIn', JSON.stringify(true));
+                                    window.location.href = '/';
+
                                 })
                         }
                     })
                     .catch((error) => {
-                        setMessage("you must complete the form before submitting");
+                        setMessage("You must fill out the form before submitting it.");
                     });
 
             }
@@ -98,20 +105,19 @@ function LoginRegister() {
         }
     };
 
-    /*
-    const user = localStorage.getItem("user");
-    
-        if (user) {
-            form = JSON.parse(user);
-            setMode("login");
-            setMessage("Logged in successfully");
+    useEffect(() => {
+        const isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'));
+        if (isLoggedIn) {
+            setLoggedIn(isLoggedIn);
         }
-    
-    */
+    }, []);
+
+
+
 
     return (
-        <div className="Form">
-            <div className="background">
+        <div className="LoginRegister">
+            <div className="Form">
                 <form onSubmit={handleSubmit}>
                     <label>Username</label>
                     <input
@@ -154,28 +160,16 @@ function LoginRegister() {
                     </button>
                 </form>
                 {message && <p className="message" >{message}</p>}
+
             </div>
         </div>
     );
 };
 
-//window.location.href ='/newPage';
 //ternary operator
 
 export default LoginRegister;
 
 
-/*
-//insert in the login
-window.localStorage.setItem('isLoggedIn', true);
-
-  useEffect(() => {
-        const isLoggedIn = window.localStorage.getItem('isLoggedIn');
-        if (isLoggedIn) {
-            setMessage("Logged in successfully");
-            window.location.href = '/';
-        }
-    }, []);
-*/
 
 
