@@ -7,11 +7,11 @@ function Footer() {
             <p className='footer-message'>Join the Adventure to save the world by going clean!</p>
             <div className='footer-links'>
                 <div >
-                    <a href='/Shop'>
-                        <h2 className='footer-links-title' href to='/Shop' >About Us</h2>
+                    <a href='/AboutUs'>
+                        <h2 className='footer-links-title' >About Us</h2>
                     </a>
-                    <a href='/Profile'>
-                        <h2 className='footer-links-title'>Contact Us</h2>
+                    <a href='/Shop'>
+                        <h2 className='footer-links-title' >Contact Us</h2>
                     </a>
                 </div>
                 <div className='footer-link-section'>

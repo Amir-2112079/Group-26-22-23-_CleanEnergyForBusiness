@@ -11,6 +11,7 @@ import ErrorPage from './Components/ErrorPage';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Pages/Footer';
 import Co2Calculator from './Components/Pages/Co2Calculator';
+import AboutUs from './Components/Pages/AboutUs';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Profile' element={<Profile />} />
           <Route path='/co2' element={<Co2Calculator />} />
+          <Route path='/AboutUs' element={<AboutUs />} />
 
           <Route path='*' element={<ErrorPage />} />
 
