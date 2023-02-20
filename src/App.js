@@ -1,18 +1,22 @@
 import './App.css';
-import './Components/CSSContents/Footer.css';
+import './Components/Footer/Footer.css';
+
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-import Home from './Components/Pages/Home';
-import GymSolution from './Components/HomeContents/GymSolution';
-import Courier from './Components/HomeContents/Couriers';
-import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
-import Shop from './Components/Pages/Shop';
-import Profile from './Components/Pages/Profile';
-import ErrorPage from './Components/ErrorPage';
-import NavBar from './Components/NavBar';
-import Footer from './Components/Pages/Footer';
-import Co2Calculator from './Components/Pages/Co2Calculator';
-import AboutUs from './Components/Pages/AboutUs';
-import Survey from './Components/Pages/Survey/Survey'
+
+import AboutUs from './Components/AboutUs/AboutUs';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
+import Footer from './Components/Footer/Footer';
+import NavBar from './Components/Navbar/Navbar';
+
+import Co2Calculator from './Pages/Co2Calculator/Co2Calculator';
+import Home from './Pages/Home/Home';
+import BoilerBioFuel from './Pages/Home/HomeContents/BoilerBioFuel';
+import Courier from './Pages/Home/HomeContents/Couriers';
+import GymSolution from './Pages/Home/HomeContents/GymSolution';
+import Profile from './Pages/Profile/Profile';
+import ProgressTracking from './Pages/ProgressTracking/Pt'
+import Shop from './Pages/Shop/Shop';
+import Survey from './Pages/Survey/Survey'
 
 function App() {
 
@@ -22,6 +26,7 @@ function App() {
 
       <Router>
         <NavBar />
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/GymSolution' element={<GymSolution />} />
@@ -34,11 +39,9 @@ function App() {
           <Route path='/Survey' element={<Survey />} />
 
           <Route path='*' element={<ErrorPage />} />
-
         </Routes>
 
         <Footer />
-
       </Router>
     </div>
 
