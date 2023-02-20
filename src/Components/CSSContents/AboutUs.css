@@ -1,0 +1,23 @@
+.Aboutus-background {
+    background-color: #0c4897b7;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AboutUs-pic {
+    margin: 30px 0;
+}
+
+.AboutUs-content {
+    color: aliceblue;
+    width: 80%;
+    text-align: left;
+}
+
+.AboutUs-pic {
+    padding: 50px;
+}
