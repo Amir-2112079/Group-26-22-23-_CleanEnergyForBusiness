@@ -1,10 +1,10 @@
-package com.backend.cleanenergyforbusinesses;
+package com.cleanenergyforbusinesses.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CleanenergyforbusinessesApplicationTests {
+class CleanenergyforbusinessesbackendApplicationTests {
 
 	@Test
 	void contextLoads() {
