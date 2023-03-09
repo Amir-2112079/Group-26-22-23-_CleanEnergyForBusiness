@@ -13,8 +13,8 @@ function NavBar() {
         <ul id="navbar">
           <NavItem to="/Shop" label="Shop" />
           <NavItem to="/Profile" label="Profile" />
-          <NavItem to="/ProgressTracking" label="Progress Tracking" />
           <NavItem to="/Survey" label="Survey" />
+          <NavItem to="/ProgressTracking" label="Progress Tracking" />
         </ul>
       </div>
     </nav>
