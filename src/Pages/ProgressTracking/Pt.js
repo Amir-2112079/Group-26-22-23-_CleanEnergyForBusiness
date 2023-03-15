@@ -1,4 +1,4 @@
-import "./Pt.css";
+import "./PT.css";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 import React, { useEffect, useState } from "react";
