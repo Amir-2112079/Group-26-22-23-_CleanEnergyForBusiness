@@ -13,7 +13,9 @@ import Footer from './Components/Pages/Footer';
 import Co2Calculator from './Components/Pages/Co2Calculator';
 import AboutUs from './Components/Pages/AboutUs';
 import Cart from './Components/Pages/Cart'
-
+import Radar from './Components/Pages/Radar';
+import BusinessChat from './Components/Pages/BusinessChat'
+import Faq from './Components/Pages/Faq';
 
 
 function App() {
@@ -38,6 +40,10 @@ function App() {
           <Route path='/Profile' element={<Profile />} />
           <Route path='/co2' element={<Co2Calculator />} />
           <Route path='/AboutUs' element={<AboutUs />} />
+
+          <Route path='/Radar' element={<Radar />} />
+          <Route path='/BusinessChat' element={<BusinessChat />} />
+          <Route path='/Faq' element={<Faq />} />
 
           <Route path='*' element={<ErrorPage />} />
 

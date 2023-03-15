@@ -13,6 +13,9 @@ function Footer() {
                     <a href='/Shop'>
                         <h2 className='footer-links-title' >Contact Us</h2>
                     </a>
+                    <a href='/Faq'>
+                        <h2 className='footer-links-title' >FAQ</h2>
+                    </a>
                 </div>
                 <div className='footer-link-section'>
                     <h2 className='footer-link-header'>Social Media</h2>
