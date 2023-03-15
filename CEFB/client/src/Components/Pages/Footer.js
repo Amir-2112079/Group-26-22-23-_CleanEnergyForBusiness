@@ -10,7 +10,7 @@ function Footer() {
                     <a href='/AboutUs'>
                         <h2 className='footer-links-title' >About Us</h2>
                     </a>
-                    <a href='/Shop'>
+                    <a href="mailto:cleanenergyforbusiness@service.com">
                         <h2 className='footer-links-title' >Contact Us</h2>
                     </a>
                     <a href='/Faq'>
