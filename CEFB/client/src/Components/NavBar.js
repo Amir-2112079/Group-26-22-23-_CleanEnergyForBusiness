@@ -15,6 +15,8 @@ function NavBar() {
                     <NavItem to='/' label='Home' />
                     <NavItem to='/Shop' label='Shop' />
                     <NavItem to='/Profile' label='Profile' />
+                    <NavItem to='/Cart' label='Cart' />
+
                 </ul>
 
             </div>

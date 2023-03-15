@@ -23,9 +23,7 @@ function Profile() {
                 <Link to='/Co2' >
                     <button className='btn-Profile' onClick={<Co2Calculator />} >Co2Calculator</button>
                 </Link>
-                <Link to='step-by-step plan'>
-                    <button className='btn-Profile' onClick={<Co2Calculator />} >plan</button>
-                </Link>
+
             </div>
 
             <div className='logout-btn'>

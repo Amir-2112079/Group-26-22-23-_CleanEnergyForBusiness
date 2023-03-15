@@ -13,7 +13,7 @@ function Home() {
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <Link className='cards__items' to='GymSolution'> <img className='fade-img'
-                        src='images/897.jpg' height={200} width={400}
+                        src='images/897.jpg' height={220} width={420}
                         alt='Gym Solution'
                     />
                         <h1 className='description'> Gyms and Fitness Centers</h1>
