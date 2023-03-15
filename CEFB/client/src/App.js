@@ -8,7 +8,7 @@ import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
 import Shop from './Components/Pages/Shop';
 import Profile from './Components/Pages/Profile';
 import ErrorPage from './Components/ErrorPage';
-import NavBar from './Components/Navbar';
+import NavBar from './Components/NavBar';
 import Footer from './Components/Pages/Footer';
 import Co2Calculator from './Components/Pages/Co2Calculator';
 import AboutUs from './Components/Pages/AboutUs';

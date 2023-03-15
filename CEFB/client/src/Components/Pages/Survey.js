@@ -1,7 +1,7 @@
 
 import Select from "react-select";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-
 
 function Survey() {
   // JavaScript --> Ex: Function, etc.
@@ -17,6 +17,13 @@ function Survey() {
     { label: "Provider5", value: "Provider5" },
   ];
 
+  const [survey, setSurveys] = useState([]);
+  const navigateTo = useNavigate();
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    navigateTo("/");
+  };
 
   return (
     // HTML
@@ -32,8 +39,6 @@ function Survey() {
                 id="BusinessNameInput"
                 placeholder="Input Business Name"
                 name="businessName"
-                value={businessName}
-                onChange={(e) => onInputChange(e)}
                 required
               />
               <br />
@@ -43,8 +48,6 @@ function Survey() {
                 id="Location"
                 placeholder="Input Location"
                 name="location"
-                value={location}
-                onChange={(e) => onInputChange(e)}
                 required
               />
               <br />
@@ -54,10 +57,6 @@ function Survey() {
                 id="TypeOfBusinessInput"
                 placeholder="Please Select the Type of Your Business"
                 name="typeOfBusiness"
-                value={TypeOfBusinessSelections.find(
-                  (option) => option.value === typeOfBusiness
-                )}
-                onChange={onInputChangeDDBox}
               />
               <br /> <br />
               <label>Current Utility Provider: </label>
@@ -66,10 +65,6 @@ function Survey() {
                 id="UtilityProviderInput"
                 placeholder="Please Select Your Current Utility Provider"
                 name="utilProvider"
-                value={UtilityProvidersSelections.find(
-                  (option) => option.value === utilProvider
-                )}
-                onChange={onInputChangeDDBox}
               />
               <br /> <br />
               <label for="co2Emission">C02 Emission:</label>
@@ -77,8 +72,6 @@ function Survey() {
                 type="range"
                 id="co2Emission"
                 name="co2"
-                value={co2}
-                onChange={(e) => onInputChange(e)}
                 list="co2EmissionValues"
               />
               <datalist id="co2EmissionValues">
