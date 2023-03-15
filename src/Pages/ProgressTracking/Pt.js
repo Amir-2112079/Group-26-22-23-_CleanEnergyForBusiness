@@ -43,7 +43,7 @@ function ProgressTracking({ chartData }) {
       <br />
       <div className="co2">
         <label>Current CO2 Emissions:</label>
-        <Bar data={chartData} />
+        <Bar height="400px" width="450px" data={chartData} />
       </div>
     </div>
   );
