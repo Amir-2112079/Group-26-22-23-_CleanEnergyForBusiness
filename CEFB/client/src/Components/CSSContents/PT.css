@@ -1,0 +1,34 @@
+.Progress-Tracking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Progress-Tracking h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.co2 label {
+  color: firebrick;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#SurveyTabe {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+th {
+  background-color: #ddd;
+}

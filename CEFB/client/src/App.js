@@ -8,7 +8,7 @@ import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
 import Shop from './Components/Pages/Shop';
 import Profile from './Components/Pages/Profile';
 import ErrorPage from './Components/ErrorPage';
-import NavBar from './Components/NavBar';
+import NavBar from './Components/Navbar';
 import Footer from './Components/Pages/Footer';
 import Co2Calculator from './Components/Pages/Co2Calculator';
 import AboutUs from './Components/Pages/AboutUs';
@@ -16,7 +16,8 @@ import Cart from './Components/Pages/Cart'
 import Radar from './Components/Pages/Radar';
 import BusinessChat from './Components/Pages/BusinessChat'
 import Faq from './Components/Pages/Faq';
-
+import Survey from "./Components/Pages/Survey";
+import Pt from "./Components/Pages/Pt"
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
           <Route path='/Courier' element={<Courier />} />
           <Route path='/BoilerBioFuel' element={<BoilerBioFuel />} />
           <Route path='/Shop' element={<Shop />} />
+          <Route path='/ProgressTracking' element={<Pt />} />
+          <Route path='/Survey' element={<Survey />} />
 
           <Route path='/cart' element={<Cart />} />
           <Route path='/Profile' element={<Profile />} />
