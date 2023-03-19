@@ -22,6 +22,20 @@ h1 {
     color: #fff;
 
 }
+.description1 {
+
+    align-items: center;
+    padding: 30px 450px;
+    font-size: 1.9rem;
+    font-weight: 6000;
+    color: #e1caca;
+
+}
+.RLE {
+
+    position: static;
+    margin: 500px 0 450px;
+}
 
 .cards__container {
 

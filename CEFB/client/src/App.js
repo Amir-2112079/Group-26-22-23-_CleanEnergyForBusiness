@@ -5,6 +5,7 @@ import Home from './Components/Pages/Home';
 import GymSolution from './Components/HomeContents/GymSolution';
 import Courier from './Components/HomeContents/Couriers';
 import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
+import RealLifeExamples from './Components/HomeContents/RealLifeExamples';
 import Shop from './Components/Pages/Shop';
 import Profile from './Components/Pages/Profile';
 import ErrorPage from './Components/ErrorPage';
@@ -40,7 +41,7 @@ function App() {
           <Route path='/Profile' element={<Profile />} />
           <Route path='/co2' element={<Co2Calculator />} />
           <Route path='/AboutUs' element={<AboutUs />} />
-
+          <Route path='/RealLifeExamples' element={<RealLifeExamples />} />
           <Route path='/Radar' element={<Radar />} />
           <Route path='/BusinessChat' element={<BusinessChat />} />
           <Route path='/Faq' element={<Faq />} />

@@ -32,6 +32,12 @@ function Home() {
                     />
                         <h1 className='description'>Biofuel-boilers</h1>
                     </Link>
+                    <Link className='RLE' to='/RealLifeExamples'><img className='fade-img'
+                        src='images/RLE.jpg' height={350} width={1200}
+                        alt='Real Life Examples'
+                    />
+                        <h1 className='description1'>Real Life Examples</h1>
+                    </Link>
                 </div>
             </div>
         </div>
