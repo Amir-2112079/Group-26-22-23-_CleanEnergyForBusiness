@@ -5,7 +5,7 @@ import Home from './Components/Pages/Home';
 import GymSolution from './Components/HomeContents/GymSolution';
 import Courier from './Components/HomeContents/Couriers';
 import BoilerBioFuel from './Components/HomeContents/BoilerBioFuel';
-import Shop from './Components/Pages/Shop';
+import Shop from './Components/Pages/A-Shop/Shop';
 import Profile from './Components/Pages/Profile';
 import ErrorPage from './Components/ErrorPage';
 import NavBar from './Components/NavBar';
@@ -21,9 +21,6 @@ import Faq from './Components/Pages/Faq';
 
 
 function App() {
-
-
-
 
   return (
 
