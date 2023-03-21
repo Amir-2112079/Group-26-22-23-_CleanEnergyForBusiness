@@ -23,6 +23,10 @@
     box-sizing: border-box;
 }
 
+.item:hover {
+    transform: scale(1.1);
+}
+
 .item img {
     height: 150px;
     object-fit: cover;
