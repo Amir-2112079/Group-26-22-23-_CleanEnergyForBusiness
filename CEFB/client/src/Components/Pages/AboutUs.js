@@ -4,7 +4,7 @@ function AboutUs() {
         <div className="Aboutus-background">
             <div className='main' >
                 <img className='AboutUs-pic'
-                    src='images/About-us.png' height={300} width={500}
+                    src='images/AboutUs.PNG' height={350} width={500}
                     alt='About Us'
                 />
 
@@ -25,7 +25,6 @@ function AboutUs() {
                     </p>
                 </div>
             </div>
-            <small className='AboutUs-content'>Created by Group 26</small>
         </div >
     )
 }

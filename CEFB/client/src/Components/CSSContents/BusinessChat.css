@@ -1,44 +1,44 @@
-.BusinessChat{
-    display: flex;
-    width: 100%;
-    height:100%;
+.BusinessChat {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-.chatselect-background{
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    background-color: #0c976db7;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
-    flex-shrink: 3;
-    overflow-y: scroll;
+.chatselect-background {
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #0c4897b7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  flex-shrink: 3;
+  overflow-y: scroll;
 }
 
-.chatselect-button{
-    flex: 1;
-    align-self: center;
-    height: 150px;
-    width: 80%;
+.chatselect-button {
+  flex: 1;
+  align-self: center;
+  height: 150px;
+  width: 80%;
 }
 
-.chatbox-container{
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    background-color: #bebebeb7;
-    flex: 1;
-    flex-grow: 3;
+.chatbox-container {
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #bebebeb7;
+  flex: 1;
+  flex-grow: 3;
 }
 
-.chatbox-background{
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    height: 577px;
-    overflow-y: scroll;
+.chatbox-background {
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  height: 577px;
+  overflow-y: scroll;
 }
 
 .chatselect-button {
@@ -52,7 +52,7 @@
   color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
   display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
@@ -91,7 +91,7 @@
   transform: translateY(0);
 }
 
-.message.received{
+.message.received {
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   padding: 5px;
@@ -100,7 +100,8 @@
   float: left;
   clear: both;
 }
-.message.sent{
+
+.message.sent {
   background-color: rgb(200, 252, 148);
   border-radius: 20px;
   padding: 5px;
@@ -110,9 +111,9 @@
   clear: both;
 }
 
-.message-text{
-  color:rgb(0, 0, 0);
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+.message-text {
+  color: rgb(0, 0, 0);
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   border-radius: 20px;
@@ -122,9 +123,9 @@
   clear: both;
 }
 
-.message-name{
-  color:rgb(68, 84, 231);
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+.message-name {
+  color: rgb(68, 84, 231);
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bolder;
   font-weight: 3000;
@@ -135,18 +136,19 @@
   clear: both;
 }
 
-.message-input{
+.message-input {
   width: 90%;
 }
 
-.selected-user{
-  color:rgb(92, 255, 220);
+.selected-user {
+  color: rgb(92, 255, 220);
   -webkit-text-stroke: 1px black;
   font-size: 32px;
   font-weight: bolder;
 }
-.chats{
-  color:rgb(253, 253, 253);
+
+.chats {
+  color: rgb(253, 253, 253);
   -webkit-text-stroke: 1px black;
   font-size: 32px;
   font-weight: bolder;
