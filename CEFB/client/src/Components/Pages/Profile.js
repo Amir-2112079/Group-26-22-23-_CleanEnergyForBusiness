@@ -4,6 +4,7 @@ import LoginRegister from './LoginRegister';
 import Radar from './Radar';
 import BusinessChat from './BusinessChat';
 import { Link } from 'react-router-dom';
+import ResetPassword from './ResetPassword';
 
 
 function Profile() {
@@ -30,6 +31,9 @@ function Profile() {
                 </Link>
                 <Link to='/BusinessChat'>
                     <button className='btn-Profile' onClick={<BusinessChat />} >Business Chat</button>
+                </Link>
+                <Link to='/ResetPassword'>
+                    <button className='btn-Profile' onClick={<ResetPassword />} >Reset Password</button>
                 </Link>
             </div>
 

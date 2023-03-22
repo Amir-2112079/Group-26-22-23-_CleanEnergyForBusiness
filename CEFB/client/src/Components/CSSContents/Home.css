@@ -23,6 +23,20 @@
     transform: scale(1.1);
 }
 
+.RLE:hover
+{
+    transform: scale(1.1);
+}
+
+.description1 {
+
+    align-items: center;
+    padding: 10px 450px;
+    font-size: 1.9rem;
+    font-weight: 6000;
+    color: #0b0b0b;
+
+}
 
 
 

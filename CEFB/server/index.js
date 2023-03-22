@@ -52,7 +52,6 @@ server.get('/checkUser/:username', (req, res) => {
     });
 });
 
-
 server.post('/register', (req, res) => {
     const { username, email, password } = req.body;
     const reg = `INSERT INTO userTable (username, email, password) VALUES (?,?,?)`;
@@ -61,7 +60,6 @@ server.post('/register', (req, res) => {
         res.send('User registered successfully');
     });
 });
-
 
 server.post('/login', (req, res) => {
     const { username, password } = req.body;
@@ -77,6 +75,25 @@ server.post('/login', (req, res) => {
 
     });
 });
+
+server.post('/resetPassword', (req, res) => {
+    const { password, email } = req.body;
+    const query = `UPDATE userTable SET password = ? WHERE email = ?`;
+    DB.query(query, [password, email], (error, results) => {
+        if (error) {
+            return res.status(500).send(error);
+        }
+        if (results.affectedRows > 0) {
+            return res.send('Password reset successfully');
+        } else {
+            return res.send('Email does not exist');
+        }
+    });
+});
+
+
+  
+
 
 server.get('/locationget/:username', (req, res) => {
     const username = req.params.username;
