@@ -1,13 +1,10 @@
 import "./CSSContents/NavBar.css";
 
 import { NavLink } from "react-router-dom";
-import Cart from "./Pages/Cart";
 
-function NavBar({ cartItems, removeFromCart, increaseQuantity, decreaseQuantity }) {
-    /*
-       <li><Link to="/">Home</Link></li>
-     <li><Link to="/cart">Cart</Link></li>
-    */
+
+function NavBar() {
+
     return (
         <nav>
             <NavLink to="/" id="title"> Clean energy for business</NavLink>
@@ -19,9 +16,6 @@ function NavBar({ cartItems, removeFromCart, increaseQuantity, decreaseQuantity 
                     <NavItem to='/Profile' label='Profile' />
                     <NavItem to='/Cart' label='Cart' />
 
-                    <li>
-                        <Cart cartItems={cartItems} removeFromCart={removeFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
-                    </li>
                 </ul>
 
             </div>

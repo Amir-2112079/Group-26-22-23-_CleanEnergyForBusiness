@@ -14,13 +14,13 @@ import Footer from './Components/Pages/Footer';
 import Co2Calculator from './Components/Pages/Co2Calculator';
 import AboutUs from './Components/Pages/AboutUs';
 import ContactUs from './Components/Pages/ContactUs';
-//import Cart from './Components/Pages/Cart'
-
+import Cart from './Components/Pages/Shop/Cart';
 import Radar from './Components/Pages/Radar';
 import BusinessChat from './Components/Pages/BusinessChat'
 import Faq from './Components/Pages/Faq';
 
 function App() {
+
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
@@ -62,19 +62,19 @@ function App() {
     <div className='App'>
 
       <Router>
-        <NavBar cartItems={cartItems} removeFromCart={removeFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
+        <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/GymSolution' element={<GymSolution />} />
           <Route path='/Courier' element={<Courier />} />
           <Route path='/BoilerBioFuel' element={<BoilerBioFuel />} />
           <Route path='/Shop' element={<Shop addToCart={addToCart} />} />
-
-          {/*<Route path='/cart' element={<Cart />} />*/}
-
-
-
-
+          <Route path='/cart' element={<Cart
+            cartItems={cartItems}
+            removeFromCart={removeFromCart}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
+          />} />
           <Route path='/Profile' element={<Profile />} />
           <Route path='/co2' element={<Co2Calculator />} />
           <Route path='/AboutUs' element={<AboutUs />} />
