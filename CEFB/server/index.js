@@ -109,6 +109,18 @@ server.get('/locationgetMarkers/:username', (req, res) => {
     });
 });
 
+server.get('/locationgetAllMarkers', (req, res) => {
+
+    const locget = `SELECT username, name, latitude, longitude FROM businessTable`;
+    DB.query(locget, [], (error, results) => {
+        if (error) throw error;
+        if (results.length > 0) {
+            console.log(results);
+            res.send(results);
+        }
+    });
+});
+
 server.post('/locationset', (req, res) => {
     console.log("locationset")
     const { username, name, lat, lng } = req.body;
