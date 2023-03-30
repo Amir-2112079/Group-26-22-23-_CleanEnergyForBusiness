@@ -2,7 +2,6 @@ import "./CSSContents/NavBar.css";
 
 import { NavLink } from "react-router-dom";
 
-
 function NavBar() {
 
     return (
@@ -22,7 +21,7 @@ function NavBar() {
         </nav >
     );
 }
-
+//two props one being to and label 
 function NavItem({ to, label }) {
     return (
         <li>

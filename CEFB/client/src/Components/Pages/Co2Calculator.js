@@ -22,17 +22,6 @@ function Co2Calculator() {
         setCo2Output(electricityCo2 + gasCo2 + vehicleCo2);
     };
 
-    /*
-        const handleChange = (e) => {
-            setForm({
-                ...form,
-                [e.target.name]: e.target.value,
-            });
-    
-        };
-    */
-
-
     return (
         <div className="Co2Calculator">
             <div >

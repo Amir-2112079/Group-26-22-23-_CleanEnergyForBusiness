@@ -9,8 +9,6 @@ const socketIO = require('socket.io');
 require('dotenv').config();
 
 
-
-
 const DB = mysql.createConnection({
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
@@ -37,6 +35,20 @@ io.on('connection', (socket) => {
     socket.join(userId);
     socket.on('message', (msg) => {
         io.to(msg.chatTo).emit('message', { chatFrom: msg.chatFrom, message: msg.message });
+    });
+});
+
+
+server.get('/api/table-data', (req, res) => {
+    const all = 'SELECT * FROM userTable';
+    DB.query(all, (error, results) => {
+        if (error) {
+            return res.status(500).send("can't get the user");
+        }
+        else {
+            return res.json(results);
+        }
+
     });
 });
 
