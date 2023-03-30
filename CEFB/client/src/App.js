@@ -20,6 +20,8 @@ import BusinessChat from './Components/Pages/BusinessChat'
 import Faq from './Components/Pages/Faq';
 import RealLifeExamples from './Components/HomeContents/RealLifeExamples';
 import ResetPassword from './Components/Pages/ResetPassword';
+import ProgressTracking from "./Components/Pages/ProgressTracking/Pt";
+import Survey from "./Components/Pages/Survey";
 
 
 function App() {
@@ -88,6 +90,8 @@ function App() {
           <Route path='/Faq' element={<Faq />} />
           <Route path='/ResetPassword' element={<ResetPassword/>} />
           <Route path='*' element={<ErrorPage />} />
+          <Route path="/ProgressTracking" element={<ProgressTracking />} />
+          <Route path="/Survey" element={<Survey />} />
 
         </Routes>
 
